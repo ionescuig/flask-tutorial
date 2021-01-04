@@ -1,3 +1,4 @@
-# flask-tutorial
+# Flask Tutorial
 
-initial commit
+Using
+[Miguel Grinberg's blog](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
