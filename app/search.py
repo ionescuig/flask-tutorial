@@ -1,6 +1,7 @@
 from flask import current_app
 
 def add_to_index(index, model):
+    print('>>> [add_to_index] >>>')
     if not current_app.elasticsearch:
         return
     payload = {}
@@ -9,11 +10,13 @@ def add_to_index(index, model):
     current_app.elasticsearch.index(index=index, id=model.id, body=payload)
 
 def remove_from_index(index, model):
+    print('>>> [remove_from_index] >>>')
     if not current_app.elasticsearch:
         return
     current_app.elasticsearch.delete(index=index, id=model.id)
 
 def query_index(index, query, page, per_page):
+    print('>>> [query_index] >>>')
     if not current_app.elasticsearch:
         return [], 0
     search = current_app.elasticsearch.search(
