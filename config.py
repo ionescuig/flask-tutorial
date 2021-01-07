@@ -34,3 +34,8 @@ class Config(object):
 
     # ELASTICSEARCH
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+
+    # LOG TO STDOUT
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
+    print('>>> [config] >>> LOG_TO_STDOUT:', LOG_TO_STDOUT)
+    
