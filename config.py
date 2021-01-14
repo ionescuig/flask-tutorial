@@ -37,3 +37,6 @@ class Config(object):
 
     # LOG TO STDOUT
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
+
+    # REDIS
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
